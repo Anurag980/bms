@@ -16,6 +16,12 @@ body {
   z-index: -1;
 }
 
+/* Section Anchor Scroll Fix */
+section[id] {
+  scroll-margin-top: 120px;
+}
+
+/* Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -29,14 +35,9 @@ body {
 }
 
 .navbar-logo {
-  font-weight: 600;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+  font-weight: 700;
   color: #004F9E;
-}
-.logo {
-  height: 40px;
-  width: auto;
-  object-fit: contain;
 }
 
 .navbar-menu {
@@ -56,6 +57,7 @@ body {
   color: #00C389;
 }
 
+/* Hero Section */
 .hero {
   height: 100vh;
   display: flex;
@@ -93,6 +95,7 @@ body {
   background: #009c6e;
 }
 
+/* Stats Section */
 .stats {
   display: flex;
   justify-content: space-around;
@@ -167,59 +170,36 @@ body {
   background-image: url('/assets/img/building.jpg');
 }
 
-/* Ease of Use - Minimal Apple-style Section */
+/* Ease of Use Features */
 .ease-use {
   padding: 80px 20px;
-  background: #fff;
   text-align: center;
 }
 
 .ease-use h2 {
   font-size: 2rem;
   margin-bottom: 40px;
-  color: #004F9E;
 }
 
 .ease-features {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   gap: 40px;
-  margin-bottom: 40px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
 }
 
 .ease-feature {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 220px;
+  max-width: 180px;
 }
 
 .ease-feature img {
-  width: 60px;
   height: 60px;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 }
 
 .ease-feature p {
   font-size: 1rem;
-  color: #333;
-}
-
-/* Dashboard image styling (if used) */
-.ease-use img {
-  margin-top: 30px;
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-}
-
-/* Responsive tweaks */
-@media (max-width: 768px) {
-  .ease-features {
-    flex-direction: column;
-    align-items: center;
-    gap: 32px;
-  }
 }
 
 /* About & Contact */
@@ -288,10 +268,6 @@ img {
 
   .case-card {
     padding: 20px;
-  }
-
-  .cert {
-    font-size: 0.8rem;
   }
 
   .diagonal-section {
