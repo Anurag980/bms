@@ -103,68 +103,124 @@ body {
   margin: 20px;
 }
 
-.overview, .ease-use, .carousel, .certifications, .about, .contact {
-  padding: 60px 20px;
+/* Diagonal Sections */
+.diagonal-section {
+  position: relative;
+  padding: 120px 20px;
+  color: #fff;
+  background-size: cover;
+  background-position: center;
+  clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
+}
+
+.diagonal-section .diagonal-content {
+  max-width: 700px;
+  margin: 0 auto;
   text-align: center;
-}
-
-.feature-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  margin: 30px 0;
-}
-
-.card {
-  background: #F2F9FF;
-  border: 1px solid #D6EAF8;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 40px 30px;
   border-radius: 12px;
-  padding: 20px;
-  font-size: 1rem;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-  transition: transform 0.2s ease;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
-.card:hover {
-  transform: translateY(-4px);
+.diagonal-content h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
 }
 
-.carousel h2 {
-  margin-bottom: 40px;
+.diagonal-content p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
 }
 
-.swiper {
-  padding: 10px 0;
+.learn-more {
+  display: inline-block;
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 12px 24px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: 500;
 }
 
-.case-card {
-  background: #F9F9F9;
-  padding: 30px;
-  border-radius: 12px;
-  max-width: 400px;
-  margin: auto;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-  text-align: left;
-}
-
-.swiper-button-next, .swiper-button-prev {
+.learn-more:hover {
+  background: #fff;
   color: #004F9E;
 }
 
-.certifications .cert-strip {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  align-items: center;
+.diagonal-section.energy {
+  background-image: url('/assets/img/energy.jpg');
 }
 
-.cert {
-  background: #003f7d;
-  padding: 10px 16px;
-  border-radius: 30px;
-  font-size: 0.85rem;
-  white-space: nowrap;
+.diagonal-section.security {
+  background-image: url('/assets/img/security.jpg');
+}
+
+.diagonal-section.automation {
+  background-image: url('/assets/img/building.jpg');
+}
+
+/* Ease of Use - Minimal Apple-style Section */
+.ease-use {
+  padding: 80px 20px;
+  background: #fff;
+  text-align: center;
+}
+
+.ease-use h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #004F9E;
+}
+
+.ease-features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.ease-feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 220px;
+}
+
+.ease-feature img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 20px;
+}
+
+.ease-feature p {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Dashboard image styling (if used) */
+.ease-use img {
+  margin-top: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .ease-features {
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
+}
+
+/* About & Contact */
+.about, .contact {
+  padding: 60px 20px;
+  text-align: center;
 }
 
 .about .brief-card {
@@ -203,12 +259,7 @@ img {
   margin-top: 20px;
 }
 
-.protocols {
-  margin-top: 10px;
-  color: #666;
-  font-size: 0.95rem;
-}
-
+/* Responsive */
 @media (max-width: 768px) {
   .navbar-menu {
     flex-direction: column;
@@ -236,5 +287,18 @@ img {
 
   .cert {
     font-size: 0.8rem;
+  }
+
+  .diagonal-section {
+    clip-path: none;
+    padding: 80px 20px;
+  }
+
+  .diagonal-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .diagonal-content p {
+    font-size: 1rem;
   }
 }

@@ -10,7 +10,6 @@
   <link rel="icon" href="/assets/favicon.ico" type="image/x-icon" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -18,11 +17,10 @@
 <body>
   <!-- Navigation Bar -->
   <nav class="navbar">
-    <div class="navbar-logo">Biasys</div>
+    <img src="/assets/logo.svg" alt="Biasys logo" class="logo" />
     <ul class="navbar-menu">
       <li><a href="#">Home</a></li>
       <li><a href="#overview">Solutions</a></li>
-      <li><a href="#carousel">Case Studies</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
@@ -46,65 +44,49 @@
     <div class="stat"><strong>2,400 tons/yr</strong><br>CO₂ Reduced</div>
   </section>
 
-  <!-- Solution Overview -->
-  <section class="overview" id="overview" data-aos="fade-up">
-    <h2>What You Get</h2>
-    <div class="feature-grid">
-      <div class="card">HVAC automation & analytics</div>
-      <div class="card">Lighting control & daylight harvesting</div>
-      <div class="card">Security & access monitoring</div>
-      <div class="card">Real-time energy dashboards</div>
-      <div class="card">Open API & mobile apps</div>
+  <!-- Solution Overview (New Diagonal Sections) -->
+  <section class="diagonal-section energy" id="overview">
+    <div class="diagonal-content" data-aos="fade-up">
+      <h2>Energy Services</h2>
+      <p>Infrastructure renewal & budget relief for the public sector.</p>
+      <a href="#contact" class="learn-more">Learn More →</a>
     </div>
-    <p class="protocols"><em>Protocols supported: BACnet, Modbus, MQTT, OPC UA</em></p>
   </section>
 
-  <!-- Ease of Use -->
+  <section class="diagonal-section security">
+    <div class="diagonal-content" data-aos="fade-up">
+      <h2>Security + Life Safety</h2>
+      <p>Video, fire, access, and integrated healthcare applications.</p>
+      <a href="#contact" class="learn-more">Learn More →</a>
+    </div>
+  </section>
+
+  <section class="diagonal-section automation">
+    <div class="diagonal-content" data-aos="fade-up">
+      <h2>Building Automation</h2>
+      <p>Monitor and control HVAC, lighting, and critical environments.</p>
+      <a href="#contact" class="learn-more">Learn More →</a>
+    </div>
+  </section>
+
+  <!-- Ease of Use (Redesigned Minimal Style) -->
   <section class="ease-use" data-aos="fade-up">
     <h2>Built for Operators & IT Alike</h2>
-    <div class="feature-grid">
-      <div class="card">Drag-and-drop graphics editor</div>
-      <div class="card">Role-based access with SSO</div>
-      <div class="card">Native integrations: Schneider, Trane, Honeywell, Johnson, Niagara</div>
+    <div class="ease-features">
+      <div class="ease-feature">
+        <img src="/assets/icons/drag.svg" alt="Drag-and-drop editor" />
+        <p>Drag-and-drop graphics editor</p>
+      </div>
+      <div class="ease-feature">
+        <img src="/assets/icons/role.svg" alt="Role-based access" />
+        <p>Role-based access with SSO</p>
+      </div>
+      <div class="ease-feature">
+        <img src="/assets/icons/integrations.svg" alt="Integrations" />
+        <p>Integrates with Trane, Honeywell, Johnson, and more</p>
+      </div>
     </div>
     <img src="/assets/img/ui-dashboard.png" alt="Dashboard UI Screenshot" />
-  </section>
-
-  <!-- Case Studies Carousel -->
-  <section class="carousel" id="carousel" data-aos="fade-up">
-    <h2>Case Studies</h2>
-    <div class="swiper case-swiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide case-card">
-          <h3>University Campus</h3>
-          <p><strong>1.25M sq.ft.</strong></p>
-          <p>Saved 28%: “Biasys paid for itself in under a year.”</p>
-        </div>
-        <div class="swiper-slide case-card">
-          <h3>Healthcare Center</h3>
-          <p><strong>420k sq.ft.</strong></p>
-          <p>Saved 35%: “Maintenance tickets dropped 40% after rollout.”</p>
-        </div>
-        <div class="swiper-slide case-card">
-          <h3>Office Tower</h3>
-          <p><strong>790k sq.ft.</strong></p>
-          <p>Saved 31%: “Tenants love the new comfort consistency.”</p>
-        </div>
-      </div>
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
-    </div>
-  </section>
-
-  <!-- Certifications Strip -->
-  <section class="certifications">
-    <div class="cert-strip">
-      <div class="cert">🏷️ BACnet Testing Labs</div>
-      <div class="cert">🌱 LEED Compatible</div>
-      <div class="cert">🔧 ISO 9001</div>
-      <div class="cert">⚡ UL-Listed Panels</div>
-      <div class="cert">⭐ Energy Star Partner</div>
-    </div>
   </section>
 
   <!-- About Biasys -->
@@ -125,16 +107,5 @@
   </section>
 
   <script src="fluid.js"></script>
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <script>
-    AOS.init();
-    new Swiper('.case-swiper', {
-      loop: true,
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev'
-      }
-    });
-  </script>
 </body>
 </html>
