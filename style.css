@@ -109,26 +109,64 @@ section[id] {
   color: #fff;
 }
 
-/* Diagonal Focus Areas */
-.diagonal-section {
-  position: relative;
-  padding: 120px 20px;
-  color: #fff;
-  background-size: cover;
-  background-position: center;
-  clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
-  z-index: 1;
-  overflow: hidden;
+/* Focus Areas - Horizontal Modern Cards */
+.focus-horizontal {
+  padding: 100px 20px;
+  background: transparent;
+  text-align: center;
 }
 
-.diagonal-section::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: linear-gradient(to bottom right, rgba(0,0,0,0.5), rgba(0,0,0,0.1));
-  z-index: 0;
+.focus-container {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
+
+.focus-card {
+  flex: 1 1 300px;
+  max-width: 380px;
+  background-size: cover;
+  background-position: center;
+  padding: 40px 20px;
+  border-radius: 20px;
+  position: relative;
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.4);
+  backdrop-filter: blur(6px);
+  background-blend-mode: overlay;
+  background-color: rgba(0, 0, 0, 0.4);
+  box-shadow: 0 8px 40px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.focus-card:hover {
+  transform: translateY(-6px);
+}
+
+.focus-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+}
+
+.focus-card p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Responsive fallback for horizontal cards */
+@media (max-width: 960px) {
+  .focus-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .focus-card {
+    max-width: 90%;
+  }
+}
+
 
 /* Gradient overlay also supports future animation if needed */
 .gradient-overlay {
