@@ -261,3 +261,14 @@ img {
     max-width: 100%;
   }
 }
+.diagonal-section.focus-architecture {
+  background-image: url('/assets/img/focus-architecture.png');
+}
+
+.diagonal-section.focus-controls {
+  background-image: url('/assets/img/focus-controls.png');
+}
+
+.diagonal-section.focus-legacy {
+  background-image: url('/assets/img/focus-legacy.png');
+}
