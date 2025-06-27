@@ -3,28 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Biasys | Building Management Systems</title>
-  <meta name="description" content="Biasys provides open, secure BMS solutions that slash energy costs by up to 80%." />
+  <title>Biasys | BMS Architecture & Controls Design</title>
+  <meta name="description" content="Biasys partners with architects and MEP firms to design open, secure, and future-ready building management systems." />
   <meta name="theme-color" content="#004F9E" />
 
   <link rel="icon" href="/assets/favicon.ico" type="image/x-icon" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
-
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <!-- load the script (already done) -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-<!-- add this just before </body> -->
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    AOS.init({
-      duration: 800,   // animation time (ms)
-      once: true       // animate only the first time you scroll to it
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      AOS.init({ duration: 800, once: true });
     });
-  });
-</script>
+  </script>
 </head>
 <body>
   <!-- Navigation Bar -->
@@ -32,90 +25,65 @@
     <div class="brand-name">Biasys</div>
     <ul class="navbar-menu">
       <li><a href="#">Home</a></li>
-      <li><a href="#overview">Solutions</a></li>
+      <li><a href="#focus">Our Work</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
-  <!-- Fluid animation background -->
+  <!-- Background -->
   <canvas id="fluid-bg"></canvas>
 
-  <!-- HERO -->
+  <!-- Hero Section -->
   <header class="hero">
     <div class="hero-content">
-      <h1>Cut building energy costs by up to 30–80%.</h1>
-      <p>Biasys unifies HVAC, lighting, security and energy analytics into one open, cyber-secure platform.</p>
-      <a href="#contact" class="cta-btn">Contact Biasys</a>
+      <h1>Blueprinting the Future of Intelligent Buildings</h1>
+      <p>We collaborate with architects and MEP firms to design secure, interoperable, and scalable BMS frameworks—without vendor lock-in.</p>
+      <a href="#contact" class="cta-btn">Start a Project</a>
     </div>
   </header>
 
-  <!-- Animated Stats -->
-  <section class="stats">
-    <div class="stat"><strong>34%</strong><br>Avg. Energy Savings</div>
-    <div class="stat"><strong>14 months</strong><br>Avg. Payback</div>
-    <div class="stat"><strong>2,400 tons/yr</strong><br>CO₂ Reduced</div>
+  <!-- Focus Areas -->
+  <section class="stats" id="focus">
+    <div class="stat" data-aos="fade-up"><strong>BMS Architecture</strong><br>Design-driven schematics that align with your vision.</div>
+    <div class="stat" data-aos="fade-up"><strong>Controls & Sequences</strong><br>We define the logic behind your building's performance.</div>
+    <div class="stat" data-aos="fade-up"><strong>Legacy Compatibility</strong><br>Open systems designed to work with what's already there.</div>
   </section>
 
-  <!-- Solution Overview (New Diagonal Sections) -->
-  <section class="diagonal-section energy" id="overview">
-    <div class="diagonal-content" data-aos="fade-up">
-      <h2>Energy Services</h2>
-      <p>Infrastructure renewal & budget relief for the public sector.</p>
-      <a href="#contact" class="learn-more">Learn More →</a>
-    </div>
-  </section>
-
-  <section class="diagonal-section security">
-    <div class="diagonal-content" data-aos="fade-up">
-      <h2>Security + Life Safety</h2>
-      <p>Video, fire, access, and integrated healthcare applications.</p>
-      <a href="#contact" class="learn-more">Learn More →</a>
-    </div>
-  </section>
-
-  <section class="diagonal-section automation">
-    <div class="diagonal-content" data-aos="fade-up">
-      <h2>Building Automation</h2>
-      <p>Monitor and control HVAC, lighting, and critical environments.</p>
-      <a href="#contact" class="learn-more">Learn More →</a>
-    </div>
-  </section>
-
-  <!-- Ease of Use (Redesigned Minimal Style) -->
+  <!-- Value Proposition -->
   <section class="ease-use" data-aos="fade-up">
-    <h2>Built for Operators & IT Alike</h2>
+    <h2>Why Biasys</h2>
     <div class="ease-features">
       <div class="ease-feature">
-        <img src="/assets/icons/drag.svg" alt="Drag-and-drop editor" />
-        <p>Drag-and-drop graphics editor</p>
+        <img src="/assets/icons/open.svg" alt="Open Protocols" />
+        <p>Open-Protocol First<br>Support for BACnet, Modbus, KNX and more.</p>
       </div>
       <div class="ease-feature">
-        <img src="/assets/icons/role.svg" alt="Role-based access" />
-        <p>Role-based access with SSO</p>
+        <img src="/assets/icons/drawing.svg" alt="Design-First" />
+        <p>Design-First Approach<br>We partner with your architects—not replace them.</p>
       </div>
       <div class="ease-feature">
-        <img src="/assets/icons/integrations.svg" alt="Integrations" />
-        <p>Integrates with Trane, Honeywell, Johnson, and more</p>
+        <img src="/assets/icons/vendor.svg" alt="Vendor Neutral" />
+        <p>Vendor-Neutral<br>We don't sell hardware. We design systems that last.</p>
       </div>
     </div>
-    <img src="/assets/img/ui-dashboard.png" alt="Dashboard UI Screenshot" />
   </section>
 
   <!-- About Biasys -->
   <section class="about" data-aos="fade-up">
-    <h2>Biasys in Brief</h2>
+    <h2>Who We Serve</h2>
     <div class="brief-card">
-      <p><strong>U.S.-based BMS specialist</strong> serving commercial and institutional facilities nationwide.</p>
-      <p>Established <strong>2012</strong> • <strong>24/7 support</strong> • <strong>250+ sites</strong></p>
+      <p>Architects • MEP Consultants • Developers • Owners' Representatives</p>
+      <p><strong>250+ buildings</strong> designed since 2012 across education, healthcare, public, and private sectors.</p>
     </div>
   </section>
 
-  <!-- Contact CTA -->
+  <!-- Contact -->
   <section class="contact" id="contact" data-aos="fade-up">
-    <h2>Ready to reduce your energy bill?</h2>
-    <p><strong>Call us:</strong> +1-800-555-BIAS</p>
-    <p><strong>Email:</strong> <a href="mailto:sales@biasys.com">sales@biasys.com</a></p>
-    <a class="cta-btn secondary" href="/assets/Biasys_Solution_Brief.pdf">Download One-Pager</a>
+    <h2>Let’s Design Smarter Together</h2>
+    <p>Partner with Biasys to plan smarter buildings—new, renovated, or retrofit-ready.</p>
+    <p><strong>Email:</strong> <a href="mailto:design@biasys.com">design@biasys.com</a></p>
+    <p><strong>Call:</strong> <a href="tel:+18005552427">+1-800-555-BIAS</a></p>
+    <a class="cta-btn secondary" href="/assets/Biasys_Solution_Brief.pdf">Download Overview</a>
   </section>
 
   <script src="fluid.js"></script>

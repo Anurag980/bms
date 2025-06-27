@@ -16,7 +16,6 @@ body {
   z-index: -1;
 }
 
-/* Section Anchor Scroll Fix */
 section[id] {
   scroll-margin-top: 120px;
 }
@@ -34,7 +33,7 @@ section[id] {
   z-index: 1000;
 }
 
-.navbar-logo {
+.brand-name {
   font-size: 1.4rem;
   font-weight: 700;
   color: #004F9E;
@@ -57,7 +56,7 @@ section[id] {
   color: #00C389;
 }
 
-/* Hero Section */
+/* Hero */
 .hero {
   height: 100vh;
   display: flex;
@@ -78,6 +77,7 @@ section[id] {
   font-size: 1.2rem;
   max-width: 700px;
   margin: 20px auto;
+  color: #333;
 }
 
 .cta-btn {
@@ -95,82 +95,52 @@ section[id] {
   background: #009c6e;
 }
 
-/* Stats Section */
+.secondary {
+  background: none;
+  border: 2px solid #00C389;
+  color: #00C389;
+  font-weight: bold;
+  padding: 12px 28px;
+  border-radius: 50px;
+}
+
+.secondary:hover {
+  background: #00C389;
+  color: #fff;
+}
+
+/* Stats - Refocused as Focus Areas */
 .stats {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 32px;
   padding: 60px 20px;
   background: #f7f7f7;
   text-align: center;
-  flex-wrap: wrap;
 }
 
 .stat {
-  font-size: 1.1rem;
-  max-width: 200px;
-  margin: 20px;
-}
-
-/* Diagonal Sections */
-.diagonal-section {
-  position: relative;
-  padding: 120px 20px;
-  color: #fff;
-  background-size: cover;
-  background-position: center;
-  clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
-}
-
-.diagonal-section .diagonal-content {
-  max-width: 700px;
-  margin: 0 auto;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.4);
-  padding: 40px 30px;
-  border-radius: 12px;
-  backdrop-filter: blur(6px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-}
-
-.diagonal-content h2 {
-  font-size: 2rem;
-  margin-bottom: 15px;
-}
-
-.diagonal-content p {
-  font-size: 1.1rem;
-  margin-bottom: 20px;
-}
-
-.learn-more {
-  display: inline-block;
-  color: #fff;
-  border: 2px solid #fff;
-  padding: 12px 24px;
-  border-radius: 50px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  font-weight: 500;
-}
-
-.learn-more:hover {
+  max-width: 280px;
+  padding: 20px;
   background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.stat:hover {
+  transform: translateY(-5px);
+}
+
+.stat strong {
+  display: block;
+  font-size: 1.2rem;
   color: #004F9E;
+  margin-bottom: 10px;
 }
 
-.diagonal-section.energy {
-  background-image: url('/assets/img/energy.png');
-}
-
-.diagonal-section.security {
-  background-image: url('/assets/img/security.png');
-}
-
-.diagonal-section.automation {
-  background-image: url('/assets/img/building.png');
-}
-
-/* Ease of Use Features */
+/* Ease of Use → Why Biasys */
 .ease-use {
   padding: 80px 20px;
   text-align: center;
@@ -190,25 +160,32 @@ section[id] {
 }
 
 .ease-feature {
-  max-width: 180px;
+  max-width: 220px;
+  text-align: center;
 }
 
 .ease-feature img {
   height: 60px;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 
 .ease-feature p {
-  font-size: 1rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
 }
 
-/* About & Contact */
-.about, .contact {
-  padding: 60px 20px;
+/* About Section */
+.about {
+  padding: 80px 20px;
   text-align: center;
 }
 
-.about .brief-card {
+.about h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.brief-card {
   background: #F2F9FF;
   border: 1px solid #D6EAF8;
   border-radius: 12px;
@@ -216,25 +193,34 @@ section[id] {
   max-width: 600px;
   margin: 0 auto;
   font-size: 1rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
 }
 
-.contact p, .contact a {
+/* Contact Section */
+.contact {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.contact p {
+  font-size: 1rem;
   margin: 10px 0;
-  color: inherit;
+  color: #333;
 }
 
-.secondary {
-  background: none;
-  border: 2px solid #00C389;
-  color: #00C389;
-  font-weight: bold;
-  padding: 12px 28px;
-  border-radius: 50px;
+.contact a {
+  color: #004F9E;
+  text-decoration: none;
+  font-weight: 500;
 }
 
-.secondary:hover {
-  background: #00C389;
-  color: #fff;
+.contact a:hover {
+  text-decoration: underline;
 }
 
 img {
@@ -252,13 +238,18 @@ img {
     text-align: center;
   }
 
-  .stats {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .ease-features {
     flex-direction: column;
     align-items: center;
   }
 
-  .hero-content h1 {
-    font-size: 2rem;
+  .stats {
+    flex-direction: column;
+    align-items: center;
   }
 
   .cta-btn, .secondary {
@@ -266,20 +257,7 @@ img {
     box-sizing: border-box;
   }
 
-  .case-card {
-    padding: 20px;
-  }
-
-  .diagonal-section {
-    clip-path: none;
-    padding: 80px 20px;
-  }
-
-  .diagonal-content h2 {
-    font-size: 1.5rem;
-  }
-
-  .diagonal-content p {
-    font-size: 1rem;
+  .stat, .ease-feature {
+    max-width: 100%;
   }
 }

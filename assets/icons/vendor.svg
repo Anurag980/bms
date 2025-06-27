@@ -1,0 +1,5 @@
+<!-- vendor.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="none" viewBox="0 0 64 64">
+  <circle cx="32" cy="32" r="24" stroke="#004F9E" stroke-width="4"/>
+  <path d="M24 24l16 16M40 24L24 40" stroke="#FF4C4C" stroke-width="3" stroke-linecap="round"/>
+</svg>
