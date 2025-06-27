@@ -159,15 +159,15 @@ section[id] {
 }
 
 .diagonal-section.energy {
-  background-image: url('/assets/img/energy.jpg');
+  background-image: url('/assets/img/energy.png');
 }
 
 .diagonal-section.security {
-  background-image: url('/assets/img/security.jpg');
+  background-image: url('/assets/img/security.png');
 }
 
 .diagonal-section.automation {
-  background-image: url('/assets/img/building.jpg');
+  background-image: url('/assets/img/building.png');
 }
 
 /* Ease of Use Features */
