@@ -15,7 +15,12 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      AOS.init({ duration: 800, once: true });
+      AOS.init({
+        duration: 1000,
+        easing: 'ease-out-quart',
+        once: true,
+        offset: 120
+      });
     });
   </script>
 </head>
@@ -35,7 +40,7 @@
 
   <!-- Hero Section -->
   <header class="hero">
-    <div class="hero-content">
+    <div class="hero-content" data-aos="zoom-in">
       <h1>Blueprinting the Future of Intelligent Buildings</h1>
       <p>We collaborate with architects and MEP firms to design secure, interoperable, and scalable BMS frameworks—without vendor lock-in.</p>
       <a href="#contact" class="cta-btn">Start a Project</a>
@@ -44,6 +49,7 @@
 
   <!-- Focus Areas -->
   <section class="diagonal-section focus-architecture" id="focus">
+    <div class="gradient-overlay"></div>
     <div class="diagonal-content" data-aos="fade-up">
       <h2>BMS Architecture</h2>
       <p>Design-driven schematics that align with your vision — HVAC, lighting, and integrated systems working as one.</p>
@@ -51,6 +57,7 @@
   </section>
 
   <section class="diagonal-section focus-controls">
+    <div class="gradient-overlay"></div>
     <div class="diagonal-content" data-aos="fade-up">
       <h2>Controls & Sequences</h2>
       <p>We define the logic and sequence of operations behind your building’s automation, ensuring clarity and performance.</p>
@@ -58,6 +65,7 @@
   </section>
 
   <section class="diagonal-section focus-legacy">
+    <div class="gradient-overlay"></div>
     <div class="diagonal-content" data-aos="fade-up">
       <h2>Legacy Compatibility</h2>
       <p>Our open-system designs are crafted to work with existing infrastructure — perfect for retrofits and phased upgrades.</p>
@@ -68,15 +76,15 @@
   <section class="ease-use" data-aos="fade-up">
     <h2>Why Biasys</h2>
     <div class="ease-features">
-      <div class="ease-feature">
+      <div class="ease-feature" data-aos="fade-up" data-aos-delay="100">
         <img src="/assets/icons/open.svg" alt="Open Protocols" />
         <p>Open-Protocol First<br>Support for BACnet, Modbus, KNX and more.</p>
       </div>
-      <div class="ease-feature">
+      <div class="ease-feature" data-aos="fade-up" data-aos-delay="200">
         <img src="/assets/icons/drawing.svg" alt="Design-First" />
         <p>Design-First Approach<br>We partner with your architects—not replace them.</p>
       </div>
-      <div class="ease-feature">
+      <div class="ease-feature" data-aos="fade-up" data-aos-delay="300">
         <img src="/assets/icons/vendor.svg" alt="Vendor Neutral" />
         <p>Vendor-Neutral<br>We don't sell hardware. We design systems that last.</p>
       </div>
