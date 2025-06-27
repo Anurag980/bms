@@ -5,11 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Biasys | Building Management Systems</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="icon" href="/assets/favicon.ico" type="image/x-icon" />
+  <meta name="description" content="Biasys provides open, secure BMS solutions that slash energy costs by up to 80%." />
+  <meta name="theme-color" content="#004F9E" />
   <link rel="stylesheet" href="style.css" />
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
 </head>
 <body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="navbar-logo">Biasys</div>
+    <ul class="navbar-menu">
+      <li><a href="#">Home</a></li>
+      <li><a href="#overview">Solutions</a></li>
+      <li><a href="#carousel">Case Studies</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
   <!-- Fluid animation background -->
   <canvas id="fluid-bg"></canvas>
 
@@ -30,7 +44,7 @@
   </section>
 
   <!-- Solution Overview -->
-  <section class="overview" data-aos="fade-up">
+  <section class="overview" id="overview" data-aos="fade-up">
     <h2>What You Get</h2>
     <ul>
       <li>HVAC automation & analytics</li>
@@ -54,7 +68,7 @@
   </section>
 
   <!-- Case Studies Carousel -->
-  <section class="carousel" data-aos="fade-up">
+  <section class="carousel" id="carousel" data-aos="fade-up">
     <h2>Case Studies</h2>
     <div class="slide">University Campus (1.25M sq.ft.) saved 28%: “Biasys paid for itself in under a year.”</div>
     <div class="slide">Healthcare Center (420k sq.ft.) saved 35%: “Maintenance tickets dropped 40% after rollout.”</div>

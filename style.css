@@ -16,6 +16,41 @@ body {
   z-index: -1;
 }
 
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 1px 8px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-logo {
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #004F9E;
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+}
+
+.navbar-menu li a {
+  text-decoration: none;
+  color: #1A1A1A;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar-menu li a:hover {
+  color: #00C389;
+}
+
 .hero {
   height: 100vh;
   display: flex;
@@ -27,7 +62,7 @@ body {
 }
 
 .hero-content h1 {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   font-weight: 600;
   color: #004F9E;
 }
@@ -59,11 +94,13 @@ body {
   padding: 60px 20px;
   background: #f7f7f7;
   text-align: center;
+  flex-wrap: wrap;
 }
 
 .stat {
   font-size: 1.1rem;
   max-width: 200px;
+  margin: 20px;
 }
 
 .overview, .ease-use, .carousel, .certifications, .about, .contact {
@@ -93,6 +130,7 @@ ul li {
   gap: 15px;
   justify-content: center;
   font-size: 0.9rem;
+  padding: 40px 20px;
 }
 
 .contact p, .contact a {
@@ -105,9 +143,40 @@ ul li {
   border: 2px solid #00C389;
   color: #00C389;
   font-weight: bold;
+  padding: 12px 28px;
+  border-radius: 50px;
 }
 
 .secondary:hover {
   background: #00C389;
   color: #fff;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .navbar-menu {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+
+  .stats {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .cta-btn, .secondary {
+    width: 100%;
+    box-sizing: border-box;
+  }
 }

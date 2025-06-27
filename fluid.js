@@ -9,12 +9,12 @@ function resize() {
 window.addEventListener("resize", resize);
 resize();
 
-const particles = Array.from({ length: 50 }, () => ({
+const particles = Array.from({ length: 60 }, () => ({
   x: Math.random() * width,
   y: Math.random() * height,
-  radius: Math.random() * 4 + 1,
-  dx: (Math.random() - 0.5) * 1.2,
-  dy: (Math.random() - 0.5) * 1.2
+  radius: Math.random() * 2 + 1,
+  dx: (Math.random() - 0.5) * 0.8,
+  dy: (Math.random() - 0.5) * 0.8
 }));
 
 function draw() {
@@ -24,15 +24,17 @@ function draw() {
     ctx.beginPath();
     ctx.arc(p.x, p.y, p.radius, 0, 2 * Math.PI);
     ctx.fillStyle = "#004F9E";
+    ctx.globalAlpha = 0.6;
     ctx.fill();
 
     for (let other of particles) {
       const dist = Math.hypot(p.x - other.x, p.y - other.y);
-      if (dist < 100) {
+      if (dist < 120) {
         ctx.beginPath();
         ctx.moveTo(p.x, p.y);
         ctx.lineTo(other.x, other.y);
-        ctx.strokeStyle = "rgba(0, 195, 137, 0.2)";
+        ctx.strokeStyle = "rgba(0, 195, 137, 0.15)";
+        ctx.lineWidth = 0.6;
         ctx.stroke();
       }
     }
@@ -44,6 +46,7 @@ function draw() {
     if (p.y < 0 || p.y > height) p.dy *= -1;
   }
 
+  ctx.globalAlpha = 1.0;
   requestAnimationFrame(draw);
 }
 draw();
