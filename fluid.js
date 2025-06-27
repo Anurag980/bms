@@ -9,7 +9,10 @@ function resize() {
 window.addEventListener("resize", resize);
 resize();
 
-const particles = Array.from({ length: 60 }, () => ({
+const PARTICLE_COUNT = 60;
+const LINK_DISTANCE = 120;
+
+const particles = Array.from({ length: PARTICLE_COUNT }, () => ({
   x: Math.random() * width,
   y: Math.random() * height,
   radius: Math.random() * 2 + 1,
@@ -20,28 +23,38 @@ const particles = Array.from({ length: 60 }, () => ({
 function draw() {
   ctx.clearRect(0, 0, width, height);
 
-  for (let p of particles) {
+  for (let i = 0; i < particles.length; i++) {
+    const p = particles[i];
+
+    // Draw particle
     ctx.beginPath();
     ctx.arc(p.x, p.y, p.radius, 0, 2 * Math.PI);
     ctx.fillStyle = "#004F9E";
     ctx.globalAlpha = 0.6;
     ctx.fill();
 
-    for (let other of particles) {
-      const dist = Math.hypot(p.x - other.x, p.y - other.y);
-      if (dist < 120) {
+    // Draw links to nearby particles
+    for (let j = i + 1; j < particles.length; j++) {
+      const q = particles[j];
+      const dx = p.x - q.x;
+      const dy = p.y - q.y;
+      const dist = Math.hypot(dx, dy);
+
+      if (dist < LINK_DISTANCE) {
         ctx.beginPath();
         ctx.moveTo(p.x, p.y);
-        ctx.lineTo(other.x, other.y);
+        ctx.lineTo(q.x, q.y);
         ctx.strokeStyle = "rgba(0, 195, 137, 0.15)";
         ctx.lineWidth = 0.6;
         ctx.stroke();
       }
     }
 
+    // Move particle
     p.x += p.dx;
     p.y += p.dy;
 
+    // Bounce off edges
     if (p.x < 0 || p.x > width) p.dx *= -1;
     if (p.y < 0 || p.y > height) p.dy *= -1;
   }

@@ -4,13 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Biasys | Building Management Systems</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
-  <link rel="icon" href="/assets/favicon.ico" type="image/x-icon" />
   <meta name="description" content="Biasys provides open, secure BMS solutions that slash energy costs by up to 80%." />
   <meta name="theme-color" content="#004F9E" />
+
+  <link rel="icon" href="/assets/favicon.ico" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body>
   <!-- Navigation Bar -->
@@ -46,48 +49,71 @@
   <!-- Solution Overview -->
   <section class="overview" id="overview" data-aos="fade-up">
     <h2>What You Get</h2>
-    <ul>
-      <li>HVAC automation & analytics</li>
-      <li>Lighting control & daylight harvesting</li>
-      <li>Security & access monitoring</li>
-      <li>Real-time energy dashboards</li>
-      <li>Open API & mobile apps</li>
-    </ul>
-    <p><em>Protocols supported: BACnet, Modbus, MQTT, OPC UA</em></p>
+    <div class="feature-grid">
+      <div class="card">HVAC automation & analytics</div>
+      <div class="card">Lighting control & daylight harvesting</div>
+      <div class="card">Security & access monitoring</div>
+      <div class="card">Real-time energy dashboards</div>
+      <div class="card">Open API & mobile apps</div>
+    </div>
+    <p class="protocols"><em>Protocols supported: BACnet, Modbus, MQTT, OPC UA</em></p>
   </section>
 
   <!-- Ease of Use -->
   <section class="ease-use" data-aos="fade-up">
     <h2>Built for Operators & IT Alike</h2>
-    <ul>
-      <li>Drag-and-drop graphics editor</li>
-      <li>Role-based access with SSO</li>
-      <li>Native integrations: Schneider, Trane, Honeywell, Johnson, Niagara</li>
-    </ul>
+    <div class="feature-grid">
+      <div class="card">Drag-and-drop graphics editor</div>
+      <div class="card">Role-based access with SSO</div>
+      <div class="card">Native integrations: Schneider, Trane, Honeywell, Johnson, Niagara</div>
+    </div>
     <img src="/assets/img/ui-dashboard.png" alt="Dashboard UI Screenshot" />
   </section>
 
   <!-- Case Studies Carousel -->
   <section class="carousel" id="carousel" data-aos="fade-up">
     <h2>Case Studies</h2>
-    <div class="slide">University Campus (1.25M sq.ft.) saved 28%: “Biasys paid for itself in under a year.”</div>
-    <div class="slide">Healthcare Center (420k sq.ft.) saved 35%: “Maintenance tickets dropped 40% after rollout.”</div>
-    <div class="slide">Office Tower (790k sq.ft.) saved 31%: “Tenants love the new comfort consistency.”</div>
+    <div class="swiper case-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide case-card">
+          <h3>University Campus</h3>
+          <p><strong>1.25M sq.ft.</strong></p>
+          <p>Saved 28%: “Biasys paid for itself in under a year.”</p>
+        </div>
+        <div class="swiper-slide case-card">
+          <h3>Healthcare Center</h3>
+          <p><strong>420k sq.ft.</strong></p>
+          <p>Saved 35%: “Maintenance tickets dropped 40% after rollout.”</p>
+        </div>
+        <div class="swiper-slide case-card">
+          <h3>Office Tower</h3>
+          <p><strong>790k sq.ft.</strong></p>
+          <p>Saved 31%: “Tenants love the new comfort consistency.”</p>
+        </div>
+      </div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
   </section>
 
   <!-- Certifications Strip -->
   <section class="certifications">
-    <span>BACnet Testing Labs</span>
-    <span>LEED Compatible</span>
-    <span>ISO 9001</span>
-    <span>UL-Listed Panels</span>
-    <span>Energy Star Partner</span>
+    <div class="cert-strip">
+      <div class="cert">🏷️ BACnet Testing Labs</div>
+      <div class="cert">🌱 LEED Compatible</div>
+      <div class="cert">🔧 ISO 9001</div>
+      <div class="cert">⚡ UL-Listed Panels</div>
+      <div class="cert">⭐ Energy Star Partner</div>
+    </div>
   </section>
 
   <!-- About Biasys -->
   <section class="about" data-aos="fade-up">
     <h2>Biasys in Brief</h2>
-    <p>U.S.-based BMS specialist serving commercial and institutional facilities nationwide. Established 2012 • 24/7 support • 250+ sites.</p>
+    <div class="brief-card">
+      <p><strong>U.S.-based BMS specialist</strong> serving commercial and institutional facilities nationwide.</p>
+      <p>Established <strong>2012</strong> • <strong>24/7 support</strong> • <strong>250+ sites</strong></p>
+    </div>
   </section>
 
   <!-- Contact CTA -->
@@ -99,6 +125,16 @@
   </section>
 
   <script src="fluid.js"></script>
-  <script>AOS.init();</script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    AOS.init();
+    new Swiper('.case-swiper', {
+      loop: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+      }
+    });
+  </script>
 </body>
 </html>
