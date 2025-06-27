@@ -1,0 +1,113 @@
+/* Fluid Design Styles for Biasys */
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #FFFFFF;
+  color: #1A1A1A;
+  overflow-x: hidden;
+}
+
+#fluid-bg {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+  background: transparent;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #004F9E;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 20px auto;
+}
+
+.cta-btn {
+  padding: 14px 32px;
+  font-size: 1rem;
+  background: #00C389;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 50px;
+  display: inline-block;
+  transition: background 0.3s;
+}
+
+.cta-btn:hover {
+  background: #009c6e;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  padding: 60px 20px;
+  background: #f7f7f7;
+  text-align: center;
+}
+
+.stat {
+  font-size: 1.1rem;
+  max-width: 200px;
+}
+
+.overview, .ease-use, .carousel, .certifications, .about, .contact {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin: 10px 0;
+}
+
+.carousel .slide {
+  margin: 20px 0;
+  font-style: italic;
+}
+
+.certifications {
+  background: #004F9E;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  font-size: 0.9rem;
+}
+
+.contact p, .contact a {
+  margin: 10px 0;
+  color: inherit;
+}
+
+.secondary {
+  background: none;
+  border: 2px solid #00C389;
+  color: #00C389;
+  font-weight: bold;
+}
+
+.secondary:hover {
+  background: #00C389;
+  color: #fff;
+}
