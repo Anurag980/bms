@@ -33,6 +33,11 @@ body {
   font-size: 1.2rem;
   color: #004F9E;
 }
+.logo {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+}
 
 .navbar-menu {
   list-style: none;
